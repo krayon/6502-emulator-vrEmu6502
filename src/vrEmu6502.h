@@ -89,14 +89,14 @@ typedef enum
 
 typedef enum
 {
-  FlagC = 0x01 << BitC,  /* carry */
-  FlagZ = 0x01 << BitZ,  /* zero */
-  FlagI = 0x01 << BitI,  /* interrupt */
-  FlagD = 0x01 << BitD,  /* decimal */
-  FlagB = 0x01 << BitB,  /* brk */
-  FlagU = 0x01 << BitU,  /* undefined */
+  FlagC = 0x01 << BitC,  /* Carry */
+  FlagZ = 0x01 << BitZ,  /* Zero */
+  FlagI = 0x01 << BitI,  /* Interrupt */
+  FlagD = 0x01 << BitD,  /* Decimal */
+  FlagB = 0x01 << BitB,  /* Break (Brk) */
+  FlagU = 0x01 << BitU,  /* UNDEFINED / UNUSED */
   FlagV = 0x01 << BitV,  /* oVerflow */
-  FlagN = 0x01 << BitN   /* negative */
+  FlagN = 0x01 << BitN   /* Negative (Sign) */
 } vrEmu6502Flag;
 
 
