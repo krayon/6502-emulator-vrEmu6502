@@ -536,6 +536,20 @@ vrEmu6502AddrMode vrEmu6502GetOpcodeAddrMode(VrEmu6502* vr6502, uint8_t opcode)
 
 /* ------------------------------------------------------------------
  *
+ * return the opcode cycle length/count
+ */
+VR_EMU_6502_DLLEXPORT
+vrEmu6502AddrMode vrEmu6502GetOpcodeCycleCount(VrEmu6502* vr6502, uint8_t opcode)
+{
+  /* find the instruction in the table */
+  const vrEmu6502Opcode* popcode = &vr6502->opcodes[opcode];
+
+  /* return cycle count for given opcode */
+  return popcode->cycles;
+}
+
+/* ------------------------------------------------------------------
+ *
  * get disassembled instruction as a string. returns next instruction address
  */
 VR_EMU_6502_DLLEXPORT
